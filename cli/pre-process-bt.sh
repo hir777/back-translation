@@ -39,7 +39,7 @@ encode < $TEST_EN > test.en
 encode < $TEST_JA > test.ja
 
 # fairseqの前処理用コマンドを実行する
-!fairseq-preprocess \
+fairseq-preprocess \
     --joined-dictionary \
     --source-lang en --target-lang ja \
     --trainpref train --validpref valid --testpref test \
