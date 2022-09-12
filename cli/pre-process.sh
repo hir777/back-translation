@@ -41,8 +41,8 @@ encode < $VALID_JA > valid.ja
 encode < $TEST_EN > test.en
 encode < $TEST_JA > test.ja
 
-encode < $TRAIN_EN_MONO > train.en
-encode < $TRAIN_JA_MONO > train.ja
+encode < $TRAIN_EN_MONO > train_mono.en
+encode < $TRAIN_JA_MONO > train_mono.ja
 
 # fairseqの前処理用コマンドを実行する
 fairseq-preprocess -s en -t ja \
