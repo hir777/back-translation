@@ -13,14 +13,17 @@ do
 done
 
 # 学習用・検証用・テスト用データのPATHを指定
-TRAIN_EN="$REPO_PATH/corpus/data/train.en"
-TRAIN_JA="$REPO_PATH/corpus/data/train.ja"
-VALID_EN="$REPO_PATH/corpus/data/valid.en"
-VALID_JA="$REPO_PATH/corpus/data/valid.ja"
-TEST_EN="$REPO_PATH/corpus/data/test.en"
-TEST_JA="$REPO_PATH/corpus/data/test.ja"
-TRAIN_SP="$REPO_PATH/src/train_sp.py"
-ENCODE="$REPO_PATH/src/encode.py"
+TRAIN_EN="$REPO_PATH/corpus/genuine_bilingual/train.en"
+TRAIN_JA="$REPO_PATH/corpus/genuine_bilingual/train.ja"
+VALID_EN="$REPO_PATH/corpus/genuine_bilingual/valid.en"
+VALID_JA="$REPO_PATH/corpus/genuine_bilingual/valid.ja"
+TEST_EN="$REPO_PATH/corpus/genuine_bilingual/test.en"
+TEST_JA="$REPO_PATH/corpus/genuine_bilingual/test.ja"
+TRAIN_SP="$REPO_PATH/scripts/train_sp.py"
+ENCODE="$REPO_PATH/scripts/encode.py"
+
+TRAIN_EN="$REPO_PATH/corpus/monolingual/train.en"
+TRAIN_JA="$REPO_PATH/corpus/monolingual/train.ja"
 
 # 学習用データセットを用いてSentencePieceを学習させる
 cat $TRAIN_EN $TRAIN_JA > train.enja
