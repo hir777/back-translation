@@ -5,7 +5,7 @@ import json
 
 
 def dl_tatoeba(repo_path):
-    ds_path = os.path.join(repo_path, "corpus/data")
+    ds_path = os.path.join(repo_path, "corpus/genuine_bilingual")
     print(ds_path)
     ds_dict = datasets.load_dataset("tatoeba", lang1="en", lang2="ja")
     ds = ds_dict["train"]
