@@ -48,6 +48,7 @@ encode < $TEST_JA_MONO > test_mono.ja
 fairseq-preprocess -s en -t ja \
     --trainpref train \
     --validpref valid \
+    --testpref test \
     --destdir data-bin \
     --joined-dictionary \
     --workers 4
