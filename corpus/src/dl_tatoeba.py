@@ -28,8 +28,8 @@ def reform_json(file1, file2):
 
 
 def json2list(repo_path):
-    ds_path = os.path.join(repo_path, "corpus/data/en-ja.json")
-    tmp_path = os.path.join(repo_path, "corpus/data/dataset.json")
+    ds_path = os.path.join(repo_path, "corpus/genuine_bilingual/en-ja.json")
+    tmp_path = os.path.join(repo_path, "corpus/genuine_bilingual/dataset.json")
     en_ls, ja_ls = [], []
 
     # jsonファイルをフォーマットし直す
