@@ -50,7 +50,7 @@ def write_ds(f_name, f_path, bitexts, div_size):
 
 
 def split_dataset(en_sents, ja_sents, split_ratio: typing.Dict[str, float], repo_path, div_size=1000000, div_train=False, div_valid=False, div_test=False):
-    data_path = os.path.join(repo_path, "corpus/data/")
+    data_path = os.path.join(repo_path, "corpus/genuine_bilingual/")
     pattern = {'\t': '', '\n': ''}
     en_ja = [replace_all(en, pattern) + '\t' + replace_all(ja, pattern)
              for en, ja in zip(en_sents, ja_sents)]
