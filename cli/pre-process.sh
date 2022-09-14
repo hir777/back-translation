@@ -29,6 +29,8 @@ TEST_JA_MONO="$REPO_PATH/corpus/monolingual/test.ja"
 cat $TRAIN_EN $TRAIN_JA > train.enja
 python $TRAIN_SP --input train.enja --prefix bpe --vocab_size 8000 --character_coverage 0.9995
 
+rm train.enja
+
 # 学習済みのSentencePieceを用いて各データセットをエンコードする
 encode () {
     python $ENCODE --model bpe.model
@@ -42,7 +44,7 @@ encode < $TEST_EN > test.en
 encode < $TEST_JA > test.ja
 
 #encode < $TEST_EN_MONO > test_mono.en
-encode < $TEST_JA_MONO > test_mono.ja
+encode < $TEST_JA_MONO > $REPO_PATH/corpus/monolingual/test_mono.ja
 
 # fairseqの前処理用コマンドを実行する
 fairseq-preprocess -s en -t ja \
@@ -51,4 +53,4 @@ fairseq-preprocess -s en -t ja \
     --testpref test \
     --destdir data-bin \
     --joined-dictionary \
-    --workers 12
+    --workers 16
