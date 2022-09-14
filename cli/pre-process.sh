@@ -22,7 +22,7 @@ TEST_JA="$REPO_PATH/corpus/genuine_bilingual/test.ja"
 TRAIN_SP="$REPO_PATH/scripts/train_sp.py"
 ENCODE="$REPO_PATH/scripts/encode.py"
 
-TEST_EN_MONO="$REPO_PATH/corpus/monolingual/test.en"
+#TEST_EN_MONO="$REPO_PATH/corpus/monolingual/test.en"
 TEST_JA_MONO="$REPO_PATH/corpus/monolingual/test.ja"
 
 # 学習用データセットを用いてSentencePieceを学習させる
@@ -41,7 +41,7 @@ encode < $VALID_JA > valid.ja
 encode < $TEST_EN > test.en
 encode < $TEST_JA > test.ja
 
-encode < $TEST_EN_MONO > test_mono.en
+#encode < $TEST_EN_MONO > test_mono.en
 encode < $TEST_JA_MONO > test_mono.ja
 
 # fairseqの前処理用コマンドを実行する
@@ -51,4 +51,4 @@ fairseq-preprocess -s en -t ja \
     --testpref test \
     --destdir data-bin \
     --joined-dictionary \
-    --workers 4
+    --workers 12
