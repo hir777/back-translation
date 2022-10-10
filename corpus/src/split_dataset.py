@@ -59,8 +59,11 @@ def split_dataset(en_sents, ja_sents, split_ratio: typing.Dict[str, float], repo
     total = len(en_ja)
     if check_ratio:
         train_size = int(split_ratio["train"] * total)
+        #train_size = 182423
         valid_size = int(split_ratio["valid"] * total)
+        #valid_size = 5404
         test_size = total - (train_size + valid_size)
+        #test_size = 5404
         train = en_ja[:train_size]
         valid = en_ja[train_size:train_size + valid_size]
         test = en_ja[train_size + valid_size:]
