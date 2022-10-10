@@ -23,7 +23,7 @@ TRAIN_SP="$REPO_PATH/scripts/train_sp.py"
 ENCODE="$REPO_PATH/scripts/encode.py"
 
 #TEST_EN_MONO="$REPO_PATH/corpus/monolingual/test.en"
-TEST_JA_MONO="$REPO_PATH/corpus/monolingual/test.ja"
+#TEST_JA_MONO="$REPO_PATH/corpus/monolingual/test.ja"
 
 # 学習用データセットを用いてSentencePieceを学習させる
 cat $TRAIN_EN $TRAIN_JA > train.enja
@@ -44,7 +44,7 @@ encode < $TEST_EN > test.en
 encode < $TEST_JA > test.ja
 
 #encode < $TEST_EN_MONO > test_mono.en
-encode < $TEST_JA_MONO > $REPO_PATH/corpus/monolingual/test_mono.ja
+#encode < $TEST_JA_MONO > $REPO_PATH/corpus/monolingual/test_mono.ja
 
 # fairseqの前処理用コマンドを実行する
 fairseq-preprocess -s en -t ja \
