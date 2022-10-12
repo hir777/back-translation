@@ -109,7 +109,7 @@ if __name__ == "__main__":
     if args.cleaning:
         workers_clean = args.workers_clean
         min_workers_clean = 1
-        max_workers_clean = 8
+        max_workers_clean = 20
         workers_clean = check_workers(
             workers_clean, "clean", min_workers_clean, max_workers_clean)
 
@@ -123,7 +123,7 @@ if __name__ == "__main__":
     # 英文と日本文をそれぞれトークン化する
     workers_tkn = args.workers_tkn
     min_workers_tkn = 1
-    max_workers_tkn = 12
+    max_workers_tkn = 20
     workers_tkn = check_workers(
         workers_tkn, "tkn", min_workers_tkn, max_workers_tkn)
 
@@ -159,7 +159,7 @@ if __name__ == "__main__":
     if args.freq_filter:
         workers_freq = args.workers_freq
         min_workers_freq = 1
-        max_workers_freq = 8
+        max_workers_freq = 20
         workers_freq = check_workers(
             workers_freq, "freq", min_workers_freq, max_workers_freq)
 
