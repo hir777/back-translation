@@ -24,5 +24,5 @@ encode () {
     python $ENCODE --model bpe.model
 }
 
-#encode < $TEST_EN_MONO >  $REPO_PATH/corpus/monolingual/test_mono_0.en
-encode < $TEST_JA_MONO > $REPO_PATH/corpus/monolingual/test_mono_0.ja
+#encode < $TEST_EN_MONO >  $REPO_PATH/corpus/monolingual/test_mono_00.en
+encode < $TEST_JA_MONO > $REPO_PATH/corpus/monolingual/test_mono_00.ja
